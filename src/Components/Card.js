@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   useDisclosure,
@@ -9,11 +9,11 @@ import {
   useColorModeValue,
   keyframes,
   usePrefersReducedMotion,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-import { FaChevronCircleRight } from 'react-icons/fa';
+import { FaChevronCircleRight } from "react-icons/fa";
 
-import ContentModal from './ContentModal';
+import ContentModal from "./ContentModal";
 
 const blink = keyframes`
   50% {
@@ -44,15 +44,15 @@ const Card = ({
     ? undefined
     : `${blink} infinite 1s ease`;
 
-  const scheme = useColorModeValue('purple', 'yellow');
+  const scheme = useColorModeValue("purple", "yellow");
   return (
     <Box>
       <Box
         mr={mr}
         mb={mb}
         transition="0.3s"
-        _hover={{ transform: 'scale(1.05)', transition: '0.3s' }}
-        _active={{ transform: 'scale(0.95)', transition: '0.1s' }}
+        _hover={{ transform: "scale(1.05)", transition: "0.3s" }}
+        _active={{ transform: "scale(0.95)", transition: "0.1s" }}
       >
         <Box
           onClick={handleOpen}
@@ -63,7 +63,7 @@ const Card = ({
         >
           <Image
             w="100%"
-            _groupHover={{ filter: 'brightness(0.3)' }}
+            _groupHover={{ filter: "brightness(0.3)" }}
             borderRadius={20}
             src={image}
           />
@@ -76,7 +76,7 @@ const Card = ({
                 colorScheme={scheme}
                 fontWeight={700}
                 visibility="hidden"
-                _groupHover={{ visibility: 'visible' }}
+                _groupHover={{ visibility: "visible" }}
               >
                 New
               </Badge>
@@ -90,13 +90,13 @@ const Card = ({
               fontSize={descriptionSize}
               fontWeight="300"
             >
-              {start} {end === null ? '' : `- ${end}`}
+              {start} {end === null ? "" : `- ${end}`}
             </Heading>
             <Heading pt="2" fontSize={size}>
               {name}
             </Heading>
             <Heading
-              pt={size === '5xl' ? 4 : 3}
+              pt={size === "5xl" ? 4 : 3}
               textTransform="uppercase"
               letterSpacing="0.2rem"
               fontSize={descriptionSize}
@@ -110,9 +110,9 @@ const Card = ({
               letterSpacing="0.1rem"
               fontSize={descriptionSize}
               visibility="hidden"
-              _groupHover={{ visibility: 'visible' }}
+              _groupHover={{ visibility: "visible" }}
             >
-              Learn More{' '}
+              Learn More{" "}
               <Icon
                 lineHeight="xl"
                 animation={animation}

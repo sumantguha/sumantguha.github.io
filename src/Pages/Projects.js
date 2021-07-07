@@ -1,70 +1,58 @@
-import React from 'react';
-import { Box, SimpleGrid } from '@chakra-ui/react';
-import tt from '../images/tt.svg';
-import webapps from '../images/webapps.svg';
-import gradeit from '../images/gradeit.svg';
-import maps from '../images/maps.svg';
-import insurance from '../images/insurance.svg';
-import message from '../images/message.svg';
-import portfolio1 from '../images/portfolio1.svg';
-import portfolio2 from '../images/portfolio2.svg';
+import React from "react";
+import { Box, SimpleGrid, Grid, GridItem } from "@chakra-ui/react";
+import tt from "../images/tt.svg";
+import webapps from "../images/webapps.svg";
+import gradeit from "../images/gradeit.svg";
+import maps from "../images/maps.svg";
+import insurance from "../images/insurance.svg";
+import message from "../images/message.svg";
+import portfolio1 from "../images/portfolio1.svg";
+import portfolio2 from "../images/portfolio2.svg";
 
-import Header from '../Components/Header';
-import Card from '../Components/Card';
+import Header from "../Components/Header";
+import Card from "../Components/Card";
 
-const Projects = props => {
+const Projects = (props) => {
   return (
-    <Box id="projects" {...props}>
+    <Box p={["5", "10", "20"]} id="projects" {...props}>
       <Header description="case studies" title="Projects" />
-
-      <Box
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
+      <Grid
+        templateRows={{ sm: "repeat(1, auto)", lg: "repeat(3, auto)" }}
+        templateColumns={{ sm: "repeat(1, auto)", lg: "repeat(3, auto)" }}
+        gap={10}
+        mt="10"
+        mb="10"
       >
-        <SimpleGrid
-          justifyContent="center"
-          alignItems="center"
-          columns={{ sm: 1, md: 2 }}
-          px="20"
-          pt="10"
-          maxW="100%"
-          mx="auto"
-        >
+        <GridItem>
           <Card
-            mr={20}
-            mb={20}
             name="Code.it"
             description="HighSchool Education Platform"
             start="2020"
             end="Present"
             image={tt}
-            size="4xl"
+            size="2xl"
             height={500}
-            descriptionSize="lg"
+            descriptionSize="md"
             newPost={true}
           />
+        </GridItem>
 
+        <GridItem>
           <Card
-            mr={20}
-            mb={20}
             name="Nifty Web Apps"
             description="Build web apps for any programming assignment"
             start="2020"
             end="Present"
             image={webapps}
-            size="4xl"
+            size="2xl"
             height={500}
-            descriptionSize="lg"
+            descriptionSize="md"
             newPost={true}
           />
-        </SimpleGrid>
+        </GridItem>
 
-        <SimpleGrid columns={{ sm: 1, md: 3 }} px="20" maxW="100%">
+        <GridItem>
           <Card
-            mr={5}
-            mb={5}
             name="Java Code Quality Linter"
             description="Web/Text Checker"
             start="2020"
@@ -75,10 +63,10 @@ const Projects = props => {
             descriptionSize="md"
             newPost={true}
           />
+        </GridItem>
 
-          {/* <Card
-            mr={5}
-            mb={5}
+        <GridItem>
+          <Card
             name="Course Data Migration"
             description="Writing jUnit tests"
             start="2020"
@@ -87,11 +75,11 @@ const Projects = props => {
             size="2xl"
             height={500}
             descriptionSize="md"
-          /> */}
+          />
+        </GridItem>
 
+        <GridItem>
           <Card
-            mr={5}
-            mb={5}
             name="Husky Maps"
             description="Interactive Map Viz"
             start="2019"
@@ -101,10 +89,10 @@ const Projects = props => {
             height={500}
             descriptionSize="md"
           />
+        </GridItem>
 
-          {/* <Card
-            mr={5}
-            mb={5}
+        <GridItem>
+          <Card
             name="Talkly"
             description="Reactive Message Platform"
             start="2020"
@@ -113,11 +101,11 @@ const Projects = props => {
             size="2xl"
             height={500}
             descriptionSize="md"
-          /> */}
+          />
+        </GridItem>
 
+        <GridItem>
           <Card
-            mr={5}
-            mb={5}
             name="Portfolio version 2"
             description="My old portfolio website"
             start="2020"
@@ -127,10 +115,10 @@ const Projects = props => {
             height={500}
             descriptionSize="md"
           />
+        </GridItem>
 
-          {/* <Card
-            mr={5}
-            mb={5}
+        <GridItem>
+          <Card
             name="Portfolio version 1"
             description="My old portfolio website"
             start="2019"
@@ -139,9 +127,9 @@ const Projects = props => {
             size="2xl"
             height={500}
             descriptionSize="md"
-          /> */}
-        </SimpleGrid>
-      </Box>
+          />
+        </GridItem>
+      </Grid>
     </Box>
   );
 };

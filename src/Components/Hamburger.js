@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Box,
   Collapse,
@@ -6,11 +6,11 @@ import {
   Heading,
   Link,
   IconButton,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-import { CgMenu, CgClose } from 'react-icons/cg';
+import { CgMenu, CgClose } from "react-icons/cg";
 
-const Hamburger = props => {
+const Hamburger = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -39,7 +39,7 @@ const Hamburger = props => {
       <Collapse in={isOpen} unmountOnExit={true} animateOpacity>
         <Box
           hidden={!isOpen}
-          position="absolute"
+          position="fixed"
           top="0"
           left="0"
           w="100%"
@@ -57,19 +57,43 @@ const Hamburger = props => {
               >
                 Navigate
               </Heading>
-              <Link fontWeight="700" pt="2" fontSize="6xl">
+              <Link
+                onClick={handleOpen}
+                href="#"
+                fontWeight="700"
+                pt="2"
+                fontSize="6xl"
+              >
                 Home
               </Link>
               <br />
-              <Link fontWeight="700" pt="2" fontSize="6xl">
+              <Link
+                onClick={handleOpen}
+                href="#about"
+                fontWeight="700"
+                pt="2"
+                fontSize="6xl"
+              >
                 About Me
               </Link>
               <br />
-              <Link fontWeight="700" pt="2" fontSize="6xl">
+              <Link
+                onClick={handleOpen}
+                href="#projects"
+                fontWeight="700"
+                pt="2"
+                fontSize="6xl"
+              >
                 Projects
               </Link>
               <br />
-              <Link fontWeight="700" pt="2" fontSize="6xl">
+              <Link
+                onClick={handleOpen}
+                href="#experience"
+                fontWeight="700"
+                pt="2"
+                fontSize="6xl"
+              >
                 Experience
               </Link>
             </Box>
@@ -77,6 +101,10 @@ const Hamburger = props => {
         </Box>
       </Collapse>
       <IconButton
+        position="absolute"
+        m="5"
+        top="0"
+        right="0"
         fontSize="4xl"
         icon={!isOpen ? <CgMenu /> : <CgClose />}
         variant="none"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   ModalBody,
@@ -7,35 +7,38 @@ import {
   Link,
   Code,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { BsPlay, BsFileEarmarkCode } from 'react-icons/bs';
+  SimpleGrid,
+} from "@chakra-ui/react";
+import { BsPlay, BsFileEarmarkCode } from "react-icons/bs";
 
 const Maps = () => {
-  const firstColor = useColorModeValue('red', 'yellow');
-  const secondColor = useColorModeValue('blue.600', 'yellow.200');
+  const firstColor = useColorModeValue("red", "yellow");
+  const secondColor = useColorModeValue("blue.600", "yellow.200");
   return (
     <Box>
       <ModalBody>
-        <Button mr={5} leftIcon={<BsPlay />} colorScheme={firstColor} size="lg">
-          <Link
-            as="a"
-            _hover={{ textDecor: 'none' }}
-            href="https://github.com/sumantguha/Java-Style-Checker"
-            isExternal={true}
-          >
-            Try Now
-          </Link>
-        </Button>
-        <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
-          <Link
-            as="a"
-            _hover={{ textDecor: 'none' }}
-            href="https://github.com/sumantguha/Java-Style-Checker"
-            isExternal={true}
-          >
-            View Source Code
-          </Link>
-        </Button>
+        <SimpleGrid columns={[1, null, 2]} spacing="5">
+          <Button leftIcon={<BsPlay />} colorScheme={firstColor} size="lg">
+            <Link
+              as="a"
+              _hover={{ textDecor: "none" }}
+              href="https://github.com/sumantguha/Java-Style-Checker"
+              isExternal={true}
+            >
+              Try Now
+            </Link>
+          </Button>
+          <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
+            <Link
+              as="a"
+              _hover={{ textDecor: "none" }}
+              href="https://github.com/sumantguha/Java-Style-Checker"
+              isExternal={true}
+            >
+              View Source Code
+            </Link>
+          </Button>
+        </SimpleGrid>
         <br />
         <br />
         <Heading display="inline-block" mr={2} size="sm">

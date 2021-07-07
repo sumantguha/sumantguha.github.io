@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   ModalBody,
@@ -9,38 +9,36 @@ import {
   Code,
   UnorderedList,
   ListItem,
-} from '@chakra-ui/react';
-import { BsPlay, BsFileEarmarkCode } from 'react-icons/bs';
+  SimpleGrid,
+} from "@chakra-ui/react";
+import { BsPlay, BsFileEarmarkCode } from "react-icons/bs";
 
-const Linter = props => {
-  const firstColor = useColorModeValue('red', 'yellow');
-  const secondColor = useColorModeValue('blue.600', 'yellow.200');
+const Linter = (props) => {
+  const firstColor = useColorModeValue("red", "yellow");
+  const secondColor = useColorModeValue("blue.600", "yellow.200");
   return (
     <Box mt={2} {...props}>
       <ModalBody>
-        <Button
-          mr={5}
-          leftIcon={<BsFileEarmarkCode />}
-          colorScheme="blue"
-          size="lg"
-        >
-          <Link
-            as="a"
-            _hover={{ textDecor: 'none' }}
-            href="https://github.com/sumantguha/Java-Style-Checker"
-            isExternal={true}
+        <SimpleGrid columns={[1, null, 2]} spacing="5">
+          <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
+            <Link
+              as="a"
+              _hover={{ textDecor: "none" }}
+              href="https://github.com/sumantguha/Java-Style-Checker"
+              isExternal={true}
+            >
+              View Source Code
+            </Link>
+          </Button>
+          <Button
+            leftIcon={<BsPlay />}
+            colorScheme={firstColor}
+            size="lg"
+            disabled={true}
           >
-            View Source Code
-          </Link>
-        </Button>
-        <Button
-          leftIcon={<BsPlay />}
-          colorScheme={firstColor}
-          size="lg"
-          disabled={true}
-        >
-          Try Now (Coming Soon!)
-        </Button>
+            Try Now (Coming Soon!)
+          </Button>
+        </SimpleGrid>
         <br />
         <br />
         <Heading display="inline-block" mr={2} size="sm">
@@ -58,7 +56,7 @@ const Linter = props => {
         <br />
         Designed specifically for the introductory computer science series at
         the University of Washington, I worked to develop a Java specific code
-        quality linter (similar to{' '}
+        quality linter (similar to{" "}
         <Link
           color={secondColor}
           as="a"
@@ -72,7 +70,7 @@ const Linter = props => {
         on fixing them. There is a corresponding text based checker for the
         webapp to display results on a student interface for ease of grading.
         The goal of such a style checker is to ensure that code aligns with our
-        specific{' '}
+        specific{" "}
         <Link
           color={secondColor}
           as="a"
@@ -89,7 +87,7 @@ const Linter = props => {
             Consistent stylstic practices amongst the large (~900 person) class
           </ListItem>
           <ListItem>
-            Accurate style conventions from the{' '}
+            Accurate style conventions from the{" "}
             <Link
               color={secondColor}
               as="a"
@@ -97,7 +95,7 @@ const Linter = props => {
               isExternal={true}
             >
               Java Lanuage Specification
-            </Link>{' '}
+            </Link>{" "}
             to maintain across industry
           </ListItem>
         </UnorderedList>

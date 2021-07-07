@@ -1,7 +1,7 @@
-import React from 'react';
-import { Box, Text } from '@chakra-ui/react';
+import React from "react";
+import { Box, Text } from "@chakra-ui/react";
 
-const Footer = props => {
+const Footer = (props) => {
   return (
     <Box mx="auto" w="100%" {...props}>
       <Box textAlign="center" fontSize="xs" fontWeight="300">

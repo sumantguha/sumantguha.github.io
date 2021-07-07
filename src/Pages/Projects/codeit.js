@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   UnorderedList,
@@ -11,61 +11,58 @@ import {
   useColorModeValue,
   Code,
   Heading,
-} from '@chakra-ui/react';
+  SimpleGrid,
+} from "@chakra-ui/react";
 
-import { BsFileEarmarkCode } from 'react-icons/bs';
-import { FaGooglePlay, FaAppStore } from 'react-icons/fa';
-import CodeItLanding from '../../images/CodeItLanding.png';
-import Settings from '../../images/Settings.png';
-import SignUp from '../../images/SignUp.png';
-import Courses from '../../images/Courses.png';
-import Banner from '../../images/Banner.png';
+import { BsFileEarmarkCode } from "react-icons/bs";
+import { FaGooglePlay, FaAppStore } from "react-icons/fa";
+import CodeItLanding from "../../images/CodeItLanding.png";
+import Settings from "../../images/Settings.png";
+import SignUp from "../../images/SignUp.png";
+import Courses from "../../images/Courses.png";
+import Banner from "../../images/Banner.png";
 
 const CodeIt = () => {
-  const firstColor = useColorModeValue('red', 'yellow');
+  const firstColor = useColorModeValue("red", "yellow");
   return (
     <Box mt={2}>
       <ModalBody>
-        <Button
-          leftIcon={<FaGooglePlay />}
-          colorScheme={firstColor}
-          size="lg"
-          mr={5}
-        >
-          <Link
-            isExternal={true}
-            _hover={{ textDecor: 'none' }}
-            as="a"
-            href="https://play.google.com/store/apps/details?id=com.trainthem"
+        <SimpleGrid columns={[1, null, 3]} spacing="5">
+          <Button
+            leftIcon={<FaGooglePlay />}
+            colorScheme={firstColor}
+            size="lg"
           >
-            Download Now (PlayStore)
-          </Link>
-        </Button>
-        <Button
-          leftIcon={<FaAppStore />}
-          colorScheme={firstColor}
-          size="lg"
-          mr={5}
-        >
-          <Link
-            isExternal={true}
-            _hover={{ textDecor: 'none' }}
-            as="a"
-            href="https://apps.apple.com/us/app/code-it/id1530425905"
-          >
-            Download Now (App Store)
-          </Link>
-        </Button>
-        <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
-          <Link
-            _hover={{ textDecor: 'none' }}
-            as="a"
-            href="https://github.com/tusharpoddar/TrainThem"
-            isExternal={true}
-          >
-            View Source Code
-          </Link>
-        </Button>
+            <Link
+              isExternal={true}
+              _hover={{ textDecor: "none" }}
+              as="a"
+              href="https://play.google.com/store/apps/details?id=com.trainthem"
+            >
+              Download Now (PlayStore)
+            </Link>
+          </Button>
+          <Button leftIcon={<FaAppStore />} colorScheme={firstColor} size="lg">
+            <Link
+              isExternal={true}
+              _hover={{ textDecor: "none" }}
+              as="a"
+              href="https://apps.apple.com/us/app/code-it/id1530425905"
+            >
+              Download Now (App Store)
+            </Link>
+          </Button>
+          <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
+            <Link
+              _hover={{ textDecor: "none" }}
+              as="a"
+              href="https://github.com/tusharpoddar/TrainThem"
+              isExternal={true}
+            >
+              View Source Code
+            </Link>
+          </Button>
+        </SimpleGrid>
         <br />
         <br />
         <Heading display="inline-block" mr={2} size="sm">
@@ -84,10 +81,10 @@ const CodeIt = () => {
         Starting to explore the neoteric world of web design and app
         development, I wanted to create content that was not only interesting
         but also aligned with my goals of improving computer science pedagogy
-        and inclusivity through a school level.{' '}
+        and inclusivity through a school level.{" "}
         <b>
           <i>Code.it</i>
-        </b>{' '}
+        </b>{" "}
         was born from this vision of augmenting the level of computational
         education, deployed to empower underprivileged students by providing
         free CS education. The app is targeted towards middle & high schoolers

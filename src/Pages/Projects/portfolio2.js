@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   ModalBody,
@@ -7,24 +7,27 @@ import {
   Link,
   Code,
   Image,
-} from '@chakra-ui/react';
-import { BsFileEarmarkCode } from 'react-icons/bs';
-import OldPortfolio from '../../images/oldportfolio.png';
+  SimpleGrid,
+} from "@chakra-ui/react";
+import { BsFileEarmarkCode } from "react-icons/bs";
+import OldPortfolio from "../../images/oldportfolio.png";
 
-const Portfolio = props => {
+const Portfolio = (props) => {
   return (
     <Box {...props}>
       <ModalBody>
-        <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
-          <Link
-            as="a"
-            _hover={{ textDecor: 'none' }}
-            href="https://github.com/sumantguha/portfolio"
-            isExternal={true}
-          >
-            View Source Code
-          </Link>
-        </Button>
+        <SimpleGrid columns={1} spacing="5">
+          <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
+            <Link
+              as="a"
+              _hover={{ textDecor: "none" }}
+              href="https://github.com/sumantguha/portfolio"
+              isExternal={true}
+            >
+              View Source Code
+            </Link>
+          </Button>
+        </SimpleGrid>
         <br />
         <br />
         <Heading display="inline-block" mr={2} size="sm">
@@ -39,7 +42,7 @@ const Portfolio = props => {
         <br />
         <br />
         An older version of this website! Not hosted anywhere but feel free to
-        look through the source code. Designed natively in{' '}
+        look through the source code. Designed natively in{" "}
         <Code children="React.js" /> with Bootstrap 4 and UI kits.
         <br />
         <br />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Flex,
   Center,
@@ -11,28 +11,28 @@ import {
   ModalContent,
   useDisclosure,
   Box,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
-import PDF from 'react-pdf-js';
+import PDF from "react-pdf-js";
 
-import Resume from '../Resume.pdf';
+import Resume from "../Resume.pdf";
 
-import { ColorModeSwitcher } from '../App.js';
+import { ColorModeSwitcher } from "../App.js";
 
-const Navbar = props => {
-  const bg = useColorModeValue('blue.600', 'yellow.200');
-  const color = useColorModeValue('gray.900', 'gray.50');
+const Navbar = (props) => {
+  const bg = useColorModeValue("blue.600", "yellow.200");
+  const color = useColorModeValue("gray.900", "gray.50");
 
-  const modalbg = useColorModeValue('white', 'gray.900');
+  const modalbg = useColorModeValue("white", "gray.900");
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [page, setPage] = useState(1);
   const [pages, setPages] = useState(null);
-  const onDocumentError = err => {
-    console.error('pdf viewer error:', err);
+  const onDocumentError = (err) => {
+    console.error("pdf viewer error:", err);
   };
-  const onDocumentComplete = numPages => {
+  const onDocumentComplete = (numPages) => {
     setPages(numPages);
   };
 
@@ -43,7 +43,7 @@ const Navbar = props => {
         fontWeight="700"
         mr={10}
         transition="0.3s"
-        _hover={{ transform: 'scale(1.05)', transition: '0.3s' }}
+        _hover={{ transform: "scale(1.05)", transition: "0.3s" }}
         variant="outline"
         borderWidth="2px"
         borderColor={bg}

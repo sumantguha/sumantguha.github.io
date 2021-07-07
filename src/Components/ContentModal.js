@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Modal,
   ModalOverlay,
@@ -11,31 +11,32 @@ import {
   Button,
   Divider,
   useColorModeValue,
-} from '@chakra-ui/react';
+  useBreakpointValue,
+} from "@chakra-ui/react";
 
-import TA from '../Pages/Experience/ta';
-import EY from '../Pages/Experience/ey';
-import Robotics from '../Pages/Experience/robotics';
-import MuSigma from '../Pages/Experience/musigma';
+import TA from "../Pages/Experience/ta";
+import EY from "../Pages/Experience/ey";
+import Robotics from "../Pages/Experience/robotics";
+import MuSigma from "../Pages/Experience/musigma";
 
-import CodeIt from '../Pages/Projects/codeit';
-import Webapps from '../Pages/Projects/webapps';
-import Linter from '../Pages/Projects/linter';
-import Ed from '../Pages/Projects/ed';
-import Maps from '../Pages/Projects/maps';
-import Portfolio from '../Pages/Projects/portfolio2';
+import CodeIt from "../Pages/Projects/codeit";
+import Webapps from "../Pages/Projects/webapps";
+import Linter from "../Pages/Projects/linter";
+import Ed from "../Pages/Projects/ed";
+import Maps from "../Pages/Projects/maps";
+import Portfolio from "../Pages/Projects/portfolio2";
 
 const pageHandler = {
-  'CSE 14x Head Teaching Assistant': <TA />,
-  'Machine Learning Intern': <EY />,
-  'Code.it': <CodeIt />,
-  'Nifty Web Apps': <Webapps />,
-  'Java Code Quality Linter': <Linter />,
-  'Course Data Migration': <Ed />,
-  'Husky Maps': <Maps />,
-  'Portfolio version 2': <Portfolio />,
-  'Embedded Systems Programmer': <Robotics />,
-  'Data Analytics Intern': <MuSigma />,
+  "CSE 14x Head Teaching Assistant": <TA />,
+  "Machine Learning Intern": <EY />,
+  "Code.it": <CodeIt />,
+  "Nifty Web Apps": <Webapps />,
+  "Java Code Quality Linter": <Linter />,
+  "Course Data Migration": <Ed />,
+  "Husky Maps": <Maps />,
+  "Portfolio version 2": <Portfolio />,
+  "Embedded Systems Programmer": <Robotics />,
+  "Data Analytics Intern": <MuSigma />,
 };
 
 const ContentModal = ({
@@ -47,12 +48,13 @@ const ContentModal = ({
   start,
   end,
 }) => {
-  const bg = useColorModeValue('white', 'gray.900');
+  const bg = useColorModeValue("white", "gray.900");
+  const size = useBreakpointValue({ base: "md", lg: "6xl" });
   return (
     <Modal
       {...props}
       onClose={onClose}
-      size="6xl"
+      size={size}
       isOpen={isOpen}
       justifyContent="center"
       alignItems="center"
@@ -69,8 +71,8 @@ const ContentModal = ({
             letterSpacing="0.2rem"
             mt={1}
           >
-            {description === undefined ? '' : `${description} |`} {start}{' '}
-            {end === null ? '' : `- ${end}`}
+            {description === undefined ? "" : `${description} |`} {start}{" "}
+            {end === null ? "" : `- ${end}`}
           </Text>
         </ModalHeader>
         <Divider colorScheme="blue" orientation="horizontal" />

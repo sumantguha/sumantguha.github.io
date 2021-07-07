@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.js": "/static/js/main.9240400c.chunk.js",
+    "main.js.map": "/static/js/main.9240400c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.d42aac38.js",
+    "runtime-main.js.map": "/static/js/runtime-main.d42aac38.js.map",
+    "static/js/2.ec3c7be0.chunk.js": "/static/js/2.ec3c7be0.chunk.js",
+    "static/js/2.ec3c7be0.chunk.js.map": "/static/js/2.ec3c7be0.chunk.js.map",
+    "static/js/3.bb5cb7f3.chunk.js": "/static/js/3.bb5cb7f3.chunk.js",
+    "static/js/3.bb5cb7f3.chunk.js.map": "/static/js/3.bb5cb7f3.chunk.js.map",
+    "index.html": "/index.html",
+    "static/js/2.ec3c7be0.chunk.js.LICENSE.txt": "/static/js/2.ec3c7be0.chunk.js.LICENSE.txt",
+    "static/media/Banner.3e6e2e18.png": "/static/media/Banner.3e6e2e18.png",
+    "static/media/CodeItLanding.9262cfdc.png": "/static/media/CodeItLanding.9262cfdc.png",
+    "static/media/Courses.62eb8393.png": "/static/media/Courses.62eb8393.png",
+    "static/media/Resume.371fd6e2.pdf": "/static/media/Resume.371fd6e2.pdf",
+    "static/media/Settings.52a0a683.png": "/static/media/Settings.52a0a683.png",
+    "static/media/SignUp.89473510.png": "/static/media/SignUp.89473510.png",
+    "static/media/TA.e11567ce.jpg": "/static/media/TA.e11567ce.jpg",
+    "static/media/autocomplete-web.4b312c12.png": "/static/media/autocomplete-web.4b312c12.png",
+    "static/media/data.9a8d656a.svg": "/static/media/data.9a8d656a.svg",
+    "static/media/gradeit.1c4255bd.svg": "/static/media/gradeit.1c4255bd.svg",
+    "static/media/insurance.b7a219ec.svg": "/static/media/insurance.b7a219ec.svg",
+    "static/media/maps.21492670.svg": "/static/media/maps.21492670.svg",
+    "static/media/message.2bdfe69f.svg": "/static/media/message.2bdfe69f.svg",
+    "static/media/ml.f03a9140.svg": "/static/media/ml.f03a9140.svg",
+    "static/media/oldportfolio.9091e62e.png": "/static/media/oldportfolio.9091e62e.png",
+    "static/media/portfolio1.7e8f02d4.svg": "/static/media/portfolio1.7e8f02d4.svg",
+    "static/media/portfolio2.93231ad4.svg": "/static/media/portfolio2.93231ad4.svg",
+    "static/media/r.c86f12f1.svg": "/static/media/r.c86f12f1.svg",
+    "static/media/teaching.b536164a.svg": "/static/media/teaching.b536164a.svg",
+    "static/media/tt.cfcb5bd6.svg": "/static/media/tt.cfcb5bd6.svg",
+    "static/media/webapps.328378aa.svg": "/static/media/webapps.328378aa.svg",
+    "static/media/workingDark.dbb5bb7a.svg": "/static/media/workingDark.dbb5bb7a.svg",
+    "static/media/workingLight.42c91473.svg": "/static/media/workingLight.42c91473.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d42aac38.js",
+    "static/js/2.ec3c7be0.chunk.js",
+    "static/js/main.9240400c.chunk.js"
+  ]
+}

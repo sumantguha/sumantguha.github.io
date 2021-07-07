@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   ModalBody,
@@ -8,48 +8,51 @@ import {
   useColorModeValue,
   Code,
   Heading,
-} from '@chakra-ui/react';
+  SimpleGrid,
+} from "@chakra-ui/react";
 
-import { BsPlay, BsFileEarmarkCode, BsNewspaper } from 'react-icons/bs';
+import { BsPlay, BsFileEarmarkCode, BsNewspaper } from "react-icons/bs";
 
-import Autocomplete from '../../images/autocomplete-web.png';
+import Autocomplete from "../../images/autocomplete-web.png";
 
 const Webapps = () => {
-  const firstColor = useColorModeValue('red', 'yellow');
-  const secondColor = useColorModeValue('blue.600', 'yellow.200');
+  const firstColor = useColorModeValue("red", "yellow");
+  const secondColor = useColorModeValue("blue.600", "yellow.200");
   return (
     <Box mt={2}>
       <ModalBody>
-        <Button leftIcon={<BsNewspaper />} colorScheme="teal" size="lg" mr={5}>
-          <Link
-            as="a"
-            _hover={{ textDecor: 'none' }}
-            href="https://arxiv.org/abs/2010.04671"
-            isExternal={true}
-          >
-            Research Paper
-          </Link>
-        </Button>
-        <Button leftIcon={<BsPlay />} colorScheme={firstColor} size="lg" mr={5}>
-          <Link
-            as="a"
-            _hover={{ textDecor: 'none' }}
-            href="https://autocomplete-me.herokuapp.com/"
-            isExternal={true}
-          >
-            Try Now
-          </Link>
-        </Button>
-        <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
-          <Link
-            as="a"
-            _hover={{ textDecor: 'none' }}
-            href="https://github.com/kevinlin1/nifty-web-apps"
-            isExternal={true}
-          >
-            View Source Code
-          </Link>
-        </Button>
+        <SimpleGrid columns={[1, null, 3]} spacing="5">
+          <Button leftIcon={<BsNewspaper />} colorScheme="teal" size="lg">
+            <Link
+              as="a"
+              _hover={{ textDecor: "none" }}
+              href="https://arxiv.org/abs/2010.04671"
+              isExternal={true}
+            >
+              Research Paper
+            </Link>
+          </Button>
+          <Button leftIcon={<BsPlay />} colorScheme={firstColor} size="lg">
+            <Link
+              as="a"
+              _hover={{ textDecor: "none" }}
+              href="https://autocomplete-me.herokuapp.com/"
+              isExternal={true}
+            >
+              Try Now
+            </Link>
+          </Button>
+          <Button leftIcon={<BsFileEarmarkCode />} colorScheme="blue" size="lg">
+            <Link
+              as="a"
+              _hover={{ textDecor: "none" }}
+              href="https://github.com/kevinlin1/nifty-web-apps"
+              isExternal={true}
+            >
+              View Source Code
+            </Link>
+          </Button>
+        </SimpleGrid>
         <br />
         <br />
         <Heading display="inline-block" mr={2} size="sm">
@@ -66,7 +69,7 @@ const Webapps = () => {
         <Code children="Figma" />
         <br />
         <br />
-        Over Summer, I worked with professor{' '}
+        Over Summer, I worked with professor{" "}
         <Link
           color={secondColor}
           as="a"
@@ -74,7 +77,7 @@ const Webapps = () => {
           isExternal={true}
         >
           Kevin Lin
-        </Link>{' '}
+        </Link>{" "}
         to develop more interactive webapps for text-based programming
         assessments. All of the take assignments for the introductory computer
         science series that we currently support have largely text-based
@@ -86,7 +89,7 @@ const Webapps = () => {
         students alike can run and modify these web apps on their own computers
         or deploy their apps online for access from any smart device at no cost.
         The tutorial presents examples from CS1 and CS2 courses in Python and
-        Java, but the ideas apply generally. We are presenting this work at{' '}
+        Java, but the ideas apply generally. We are presenting this work at{" "}
         <Link
           color={secondColor}
           as="a"
